@@ -1,0 +1,110 @@
+.resume {
+    height: 100%;
+}
+
+.timeline {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+
+    &_experience, &_education {
+        width: 50%;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_header-text {
+            display: inline-block;
+            color: var(--themed-secondary-background-color);
+            font-size: 24px;
+            font-family: var(--sub-heading-font);
+            font-weight: 700;
+            line-height: 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-bottom: 2px solid var(--themed-main-text-color);
+        }
+
+        &_header-text::before, &_header-text::after {
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 5px;
+            background-color: var(--themed-main-text-color);
+            bottom: -1px;
+        }
+
+        &_header-text::before {
+            left: 0;
+        }
+
+        &_header-text::after {
+            right: 0;
+        }
+
+        &_vertical-timeline-element {
+            padding: 0px 0px 30px 0px;
+            
+
+            &:last-child {
+                padding-bottom: 0px;
+            }
+        }
+
+        .vertical-timeline-element-title-wrapper {
+           
+
+            h3, h4 {
+                font-size: 20px;
+                font-family: var(--text-font);
+                padding-bottom: 10px;
+            }
+
+            h4 {
+                
+            }
+            
+        }
+
+        p {
+            font-size: 18px;
+            font-family: var(--text-font);
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+
+        &_experience, &_education {
+            width: 100%;
+            gap: 2rem;
+
+            .vertical-timeline-element-title-wrapper {
+           
+
+                h3, h4 {
+                    font-size: 18px;
+                }
+    
+                h4 {
+                    
+                }
+                
+            }
+    
+            p {
+                font-size: 16px;
+            }
+        }
+
+        &_experience_header-text, &_education_header-text {
+            margin-top: 30px;
+        }   
+        
+    }
+}

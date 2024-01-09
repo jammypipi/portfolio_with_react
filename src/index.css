@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lato&family=Oswald:wght@500&family=Playfair+Display&family=Roboto+Slab:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=DotGothic16&family=Noto+Serif&family=Playfair+Display&family=Roboto+Flex:opsz@8..144&family=Rubik+Doodle+Shadow&family=Slabo+27px&family=Source+Sans+3&display=swap');
+
+:root {
+     --themed-background-color : #1A1A2E;
+     --themed-secondary-background-color : #968dff;
+     --themed-main-text-color : #FFFFFF;
+     --themed-sub-text-color : #e0e0e0;
+     --themed-nav-background-color : #29293e;
+     --themed-icon-background-color : #ffefff;
+
+     --header--font: 'Rubik Doodle Shadow', system-ui;
+     --nav-font: 'Lato', sans-serif;
+     --heading-font: 'Roboto Slab', serif;
+     --sub-heading-font: 'Slabo 27px', serif;
+     --text-font: 'Roboto Flex', sans-serif;
+
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    background: var(--themed-background-color);
+}
+
+#root {
+    height: 11100%;
+}

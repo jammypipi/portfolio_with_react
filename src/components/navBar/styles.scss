@@ -1,0 +1,106 @@
+.navbar {
+    background-color: var(--themed-nav-background-color);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+
+    &_container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: inherit;
+        padding: 0px 20px;
+        flex: 1;
+
+        &_logo {
+            color: var(--themed-icon-background-color);
+            cursor: pointer;
+            padding: 20px;
+            text-decoration: none;
+
+            a {
+                text-decoration: none;
+                color: var(--themed-icon-background-color);
+                margin-left: 30px;
+                margin-right: 20px;
+            }
+        }
+        
+
+        &_menu {
+            display: flex;
+            list-style: none;
+            text-align: center;
+
+            &_item {
+                line-height: 40px;
+                margin-right: 1.5rem;
+                font-size: 1.6rem;
+                font-family: var(--nav-font);
+
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    background: transparent;
+                    transition: all 0.5s ease;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    background: var(--themed-main-text-color);
+                }
+
+                &_links {
+                    color: var(--themed-main-text-color);
+                    text-decoration: none;
+                    padding: 0.5rem;
+
+                }
+            }
+            
+        }
+    }
+
+}
+
+.nav-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 830px) {
+
+    .navbar_container_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -110%;
+        opacity: 1;
+        transition: all 0.5s ease;
+
+        &.active {
+            left: 0px;
+            opacity: 1;
+        }
+
+        &_item {
+            margin: 0px;
+            padding: 20px 0px;
+        }
+    }
+
+    .nav-icon {
+        display: block;
+        cursor: pointer;
+        color: var(--themed-main-text-color);
+        padding-right: 20px;
+    }
+
+}
