@@ -39,6 +39,12 @@ const Navbar = () => {
         setToggleIcon(!toggleIcon)
     }
 
+    const handleMenuItemClick = () => {
+        // Add any specific behavior you want to happen when a menu item is clicked on mobile
+        // For example, you can close the menu by setting toggleIcon to false:
+        setToggleIcon(false);
+    };
+
     return (
         <div>
             <nav className="navbar">
@@ -58,7 +64,7 @@ const Navbar = () => {
                     {
                         Data.map((item, key) => (
                             <li key={key} className="navbar_container_menu_item">
-                                <Link className="navbar_container_menu_item_links" to={item.to}>
+                                <Link className="navbar_container_menu_item_links" to={item.to} onClick={handleMenuItemClick}>
                                     {item.label}
                                 </Link>
                             </li>

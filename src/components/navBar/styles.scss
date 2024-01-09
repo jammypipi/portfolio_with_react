@@ -74,6 +74,13 @@
 
 @media only screen and (max-width: 830px) {
 
+    .navbar {
+        background-color: var(--themed-nav-background-color);  // Set the desired color for the opaque background
+        height: auto;  // Adjust as needed
+        position: relative;
+        z-index: 1000;  // Adjust the z-index as needed to ensure it appears above other elements
+    }
+
     .navbar_container_menu {
         display: flex;
         flex-direction: column;
@@ -84,6 +91,7 @@
         left: -110%;
         opacity: 1;
         transition: all 0.5s ease;
+        background-color: var(--themed-secondary-background-color);
 
         &.active {
             left: 0px;
@@ -101,6 +109,9 @@
         cursor: pointer;
         color: var(--themed-main-text-color);
         padding-right: 20px;
+        position: absolute;
+        top: 20px;  // Adjust the top position as needed
+        right: 20px;
     }
 
 }
